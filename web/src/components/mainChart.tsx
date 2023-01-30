@@ -23,7 +23,6 @@ export function MainChart() {
   useEffect(() => {
     api.get("/summary").then((response) => {
       setSummary(response.data);
-      console.log(response.data);
     });
   }, []);
 
@@ -42,19 +41,20 @@ export function MainChart() {
         })}
       </div>
       <div className="grid grid-rows-7 grid-flow-col gap-3  ">
-        {chartDates.map((day) => {
-          const dayInSummary = summary.find((D) => {
-            return dayjs(day).isSame(D.date, "day");
-          });
-          return (
-            <HabitDay
-              date={day}
-              amount={dayInSummary?.amount}
-              completed={dayInSummary?.completed}
-              key={day.toString()}
-            />
-          );
-        })}
+        {summary.length > 0 &&
+          chartDates.map((day) => {
+            const dayInSummary = summary.find((D) => {
+              return dayjs(day).isSame(D.date, "day");
+            });
+            return (
+              <HabitDay
+                date={day}
+                amount={dayInSummary?.amount}
+                defaultCompleted={dayInSummary?.completed}
+                key={day.toString()}
+              />
+            );
+          })}
         {amountOfDaystoFill > 0 &&
           Array.from({ length: amountOfDaystoFill }).map((_, i) => {
             return (

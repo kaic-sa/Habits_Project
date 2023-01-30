@@ -4,6 +4,7 @@ import clsx from "clsx";
 import * as Checkbox from "@radix-ui/react-checkbox";
 import { Check } from "phosphor-react";
 import dayjs from "dayjs";
+import { ListHabits } from "./ListHabits";
 
 interface HabitDayProps {
   completed?: number;
@@ -15,7 +16,7 @@ export function HabitDay({ completed = 0, amount = 0, date }: HabitDayProps) {
   const completedP = amount > 0 ? Math.round((completed / amount) * 100) : 0;
   const dayAndMonth = dayjs(date).format("DD/MM");
   const dayOfWeek = dayjs(date).format("dddd");
-  console.log(completedP);
+
   return (
     <Popover.Root>
       <Popover.Trigger
@@ -38,24 +39,7 @@ export function HabitDay({ completed = 0, amount = 0, date }: HabitDayProps) {
             {dayAndMonth}
           </span>
           <ProgressBar progress={completedP} />
-          {/*checkbox*/}
-          <div className="mt-4 flex flex-col gap-3 border-0 ">
-            <Checkbox.Root
-              className="flex items-center group "
-              style={{ outline: "none" }}
-            >
-              <div className="h-8 w-8 rounded-lg flex items-center -ml-5 justify-center  bg-zinc-900 border-2 border-zinc-800 group-data-[state=checked]:bg-green-500">
-                <Checkbox.Indicator>
-                  <Check size={20} className="text-white" />
-                </Checkbox.Indicator>
-              </div>
-
-              <span className=" ml-3 font-semibold text-xl text-white leading-tight group-data-[state=checked]:line-through group-data-[state=checked]:text-zinc-400">
-                Beber água
-              </span>
-            </Checkbox.Root>
-          </div>
-          {/*checkbox*/}
+          <ListHabits date={date}></ListHabits>
           <Popover.Arrow
             height={8}
             width={16}

@@ -15,7 +15,7 @@ type summary = Array<{
   date: string;
   amount: number;
   completed: number;
-}>;
+}>; // type summary = {}[] outra forma de tipar um array heterogeneo
 
 export function MainChart() {
   const [summary, setSummary] = useState<summary>([]);

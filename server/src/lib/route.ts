@@ -56,9 +56,10 @@ export async function appRoute(app: FastifyInstance) {
       },
     });
     //essa função filtra dentro do dia os habitos completados e só retorna o ID de cada habito
-    const completedHabits = day?.dayHabits.map((dayHabit) => {
-      return dayHabit.habit_id;
-    });
+    const completedHabits =
+      day?.dayHabits.map((dayHabit) => {
+        return dayHabit.habit_id;
+      }) ?? [];
     return {
       possibleHabits,
       completedHabits,

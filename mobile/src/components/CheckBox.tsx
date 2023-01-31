@@ -6,6 +6,10 @@ import {
 } from "react-native";
 import { Entypo } from "@expo/vector-icons";
 import colors from "tailwindcss/colors";
+import Animated, {
+  RotateInUpLeft,
+  RotateOutUpRight,
+} from "react-native-reanimated";
 
 interface Props extends TouchableOpacityProps {
   checked?: boolean;
@@ -20,9 +24,13 @@ export function CheckBox({ checked = false, title, ...rest }: Props) {
       {...rest}
     >
       {checked ? (
-        <View className="h-8 w-8 bg-green-500 rounded-lg items-center justify-center">
+        <Animated.View
+          className="h-8 w-8 bg-green-500 rounded-lg items-center justify-center"
+          entering={RotateInUpLeft}
+          exiting={RotateOutUpRight}
+        >
           <Entypo name="check" size={20} color={colors.white}></Entypo>
-        </View>
+        </Animated.View>
       ) : (
         <View className="h-8 w-8 bg-zinc-900 rounded-lg"></View>
       )}

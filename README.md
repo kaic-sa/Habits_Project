@@ -1,10 +1,19 @@
-<h1 align="center">Welcome to Caring your habits 👋</h1>
+<h1 align="center">Este é o Caring Your Habits 👋</h1>
 <p>
 </p>
 
-> Aplicativo para gestão diária de hábitos, hobbie e atividades.
+> A proposta deste aplicativo é a gestão diária de hábitos, hobbie e atividades. 
+> Versão WEB e MOBILE
+> Front + Back + Databse
 
-## Install
+## Technologies
+ 
+ - Vite React & EXPO React Native
+ - Prisma / SQLite
+ - Fastify
+ - Tailwind CSS
+
+## Installation
 
 ```sh
 npm install
@@ -15,9 +24,5 @@ npm install
 ```sh
 npm run start
 ```
-
-## Author
-
-👤 **Kaíc S**
-
+## Screenshots
 

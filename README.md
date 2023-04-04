@@ -2,9 +2,9 @@
 <p>
 </p>
 
-> A proposta deste aplicativo é a gestão diária de hábitos, hobbie e atividades. /br 
-> Versão WEB e MOBILE /br
-> Front + Back + Databse /br
+> A proposta deste aplicativo é a gestão diária de hábitos, hobbie e atividades. </br>
+> Versão WEB e MOBILE </br>
+> Front + Back + Databse </br>
 
 ## Technologies
  

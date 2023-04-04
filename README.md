@@ -2,6 +2,14 @@
 <p>
 </p>
 
+![chart3](https://user-images.githubusercontent.com/84157079/229859410-d4d63cca-bf67-4c95-97b9-fb72b89ba095.jpg)
+
+
+
+
+
+
+
 > A proposta deste aplicativo é a gestão diária de hábitos, hobbie e atividades. </br>
 > Versão WEB e MOBILE </br>
 > Front + Back + Databse </br>

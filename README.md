@@ -32,5 +32,15 @@ npm install
 ```sh
 npm run start
 ```
-## Screenshots
+
+## Author
+
+👤 **Kaíc S**
+
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+***
 

@@ -7,6 +7,7 @@ import {
 import { Entypo } from "@expo/vector-icons";
 import colors from "tailwindcss/colors";
 import Animated, {
+  RollOutRight,
   RotateInUpLeft,
   RotateOutUpRight,
 } from "react-native-reanimated";
@@ -26,7 +27,7 @@ export function CheckBox({ checked = false, title, ...rest }: Props) {
       {checked ? (
         <Animated.View
           className="h-8 w-8 bg-green-500 rounded-lg items-center justify-center"
-          entering={RotateInUpLeft}
+          entering={RollOutRight}
           exiting={RotateOutUpRight}
         >
           <Entypo name="check" size={20} color={colors.white}></Entypo>
